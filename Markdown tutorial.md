@@ -171,6 +171,11 @@ D-->>A: Dashed open arrow
 | Content from cell 1         | Content from cell 2          |
 | Content in the first column | Content in the second column |
 
+| Left-aligned | Center-aligned | Right-aligned                            |
+| :----------- | :------------: | ---------------------------------------: |
+| git status   | `git status`   | *new or modified* files                  |
+| git status   | `git diff`     | differences that **haven't been** staged |
+
 ### Mathematical formula \(y = x^2\)
 Inline math: $\dfrac{ \tfrac{1}{2} [1-(\tfrac{1}{2})^n] }{ 1-\tfrac{1}{2} } = s_n$.
 
