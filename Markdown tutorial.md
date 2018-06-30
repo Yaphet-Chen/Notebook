@@ -18,22 +18,25 @@
 
 <!-- /code_chunk_output -->
 
-### Text and link
-It's very easy to make some words **bold** and other words *italic* with Markdown. Any word wrapped with two tildes (like ~~this~~) will appear crossed out. 
+# Text and link
+
+It's very easy to make some words **bold** and other words *italic* with Markdown. Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
 You can even [link to Google!](http://google.com)
 And, of course emoji! :sparkles: :camel: :boom:
 If you want to embed images, this is how you do it:
 ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 *注：插入图片的语法和链接的语法很像，只是前面多了一个 ！*
 
-### Blockquote
+# Blockquote
+
 If you'd like to quote someone, use the > character before the line:
 
 As Kanye West said:
 > We're living the future so
 > the present is our past.
 
-### Emphasis
+# Emphasis
+
 *This text will be italic*
 _This will also be italic_
 
@@ -44,7 +47,8 @@ _You **can** combine them_
 
 ~~This text will be strikethrough~~
 
-### Horizontal Rule
+# Horizontal Rule
+
 Three or more...
 Hyphens`---`
 
@@ -54,45 +58,52 @@ Asterisks`***`
 Underscores`___`
 ___
 
-### Miscellaneous
-- Footnotes 
+# Miscellaneous
+
+- Footnotes
   Content [^1]
   [^1]: Hi! This is a footnote
-- Superscript 
+- Superscript
   30^th^
-- Subscript 
+- Subscript
   H~2~O
 - Abbreviation
   The HTML specification is maintained by the W3C.
   *[HTML]: Hyper Text Markup Language
   *[W3C]:  World Wide Web Consortium
-- Mark 
+- Mark
   ==marked==
 
-### List
+# List
+
 Numbered lists:
+
 1. One
 2. Two
 3. Three
 
 Bullet points:
+
 * Start a line with a star
 * Profit!
 
 Alternatively,
+
 - Dashes work just as well
 - And if you have sub points, put two spaces before the dash or star:
   - Like this
   - And this
 
-### To-do List/Tasks list
+# To-do List/Tasks list
+
 - [x] 已完成项目1
-    - [x] 已完成事项1
-    - [ ] 待办事项2
+  - [x] 已完成事项1
+  - [ ] 待办事项2
 - [ ] 待办项目2
 - [ ] 待办项目3
 
-### Style Code
+# Style Code
+
 Inline code blocks, wrap them in backticks: `var example = true`.  
 
 Indent with four spaces:
@@ -122,7 +133,7 @@ class Employee:
       self.name = name
       self.salary = salary
       Employee.empCount += 1
-   
+
    def displayCount(self):
      print "Total Employee %d" % Employee.empCount
 
@@ -138,7 +149,8 @@ emp2.displayEmployee()
 print "Total Employee %d" % Employee.empCount
 ```
 
-### Flow Charts
+# Flow Charts
+
 ```flow
 st=>start: Start|past:>http://www.google.com[blank]
 e=>end: End|future:>http://www.google.com
@@ -156,7 +168,8 @@ c2(yes)->io->e
 c2(no)->op2->e
 ```
 
-### Sequence Diagrams
+# Sequence Diagrams
+
 ```sequence {theme="hand"}
 Title: Here is a title
 A->B: Normal line
@@ -165,7 +178,8 @@ C->>D: Open arrow
 D-->>A: Dashed open arrow
 ```
 
-### Tables
+# Tables
+
 | First Header                | Second Header                |
 | --------------------------- | ---------------------------- |
 | Content from cell 1         | Content from cell 2          |
@@ -176,13 +190,16 @@ D-->>A: Dashed open arrow
 | git status   | `git status`   | *new or modified* files                  |
 | git status   | `git diff`     | differences that **haven't been** staged |
 
-### Mathematical formula \(y = x^2\)
+# Mathematical formula \(y = x^2\)
+
 Inline math: $\dfrac{ \tfrac{1}{2} [1-(\tfrac{1}{2})^n] }{ 1-\tfrac{1}{2} } = s_n$.
 
 Math block:
+
 ```math
 \oint_C x^3\, dx + 4y^2\, dy
 ```
+
 $$ 2 = \left( \frac{\left(3-x\right) \times 2}{3-x} \right) $$
 
 $$ \sum_{m=1}^\infty \sum_{n=1}^\infty \frac{m^2\, n} {3^m\left(m\, 3^n+n\, 3^m\right)}

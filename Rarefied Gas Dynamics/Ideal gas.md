@@ -11,16 +11,18 @@
 
 <!-- /code_chunk_output -->
 
-### Ideal gas law
-common forms
+# Ideal gas law
+
+Common forms
 $$ PV=NkT=\frac{M}{m}kT=MRT $$
 
-or 
+or
 $$ P=\rho RT$$
 
 here:
+
 - P is the pressure of the gas,
-- V is the volume of the gas, 
+- V is the volume of the gas,
 - N is the number of gas molecules (or Avogadro constant times the amount of substance $ N_A n $),
 - k is the Boltzmann constant,
 - T is the absolute temperature of the gas,
@@ -29,7 +31,8 @@ here:
 - $ R=\frac{k}{m} $ is the specific gas constant,
 - $ \rho $ is the density of the gas.
 
-### Thermodynamics properties
+# Thermodynamics properties
+
 The **total energy** of gas is (without the consideration of potential energy)
 $$ \rho E = \rho e+\frac{1}{2}\rho U^2 $$
 
@@ -49,7 +52,6 @@ where $ c_v $ is the **specific heat capacity at constant volume**.
 or
 $$ de = c_v dT $$
 
-
 For isobaric process (*unit mass* here),
 $$ c_p dT = \delta Q = de+PdV = de+Pd(\frac{1}{\rho}) = c_vdT+d(\frac{P}{\rho}) = c_vdT+RdT $$
 
@@ -57,7 +59,7 @@ where $ c_p $ is the **specific heat capacity at constant pressure**.
 Therefore, we have
 $$ c_v+R=c_p $$
 
-The **specific enthalpy** of the gas is 
+The **specific enthalpy** of the gas is
 $$ h=e+\frac{P}{\rho} $$
 
 and
@@ -65,7 +67,8 @@ $$ dh = d(e+\frac{P}{\rho}) = c_pdT $$
 
 for isobaric process.
 
-### Equipartition Theorem
+# Equipartition Theorem
+
 The original idea of equipartition was that, in ==*thermal equilibrium*==, energy is shared equally among all of its various forms. For *unit mass* gas, internal energy = translational energy + rotational energy + vibrational energy (T<1600K, no vibration) + $\cdots$.
 $$ e = \frac{\alpha}{2}NkT = \frac{\alpha}{2}\frac{k}{m}T = \frac{\alpha}{2}RT $$
 
@@ -84,12 +87,13 @@ $$ e = c_vT = \frac{c_v P}{R \rho} = \frac{P}{(\gamma-1)\rho} $$
 Thus, the total energy of gas can be rewritten as
 $$ \rho E = \rho e+\frac{1}{2}\rho U^2 = \frac{P}{\gamma-1}+\frac{1}{2}\rho U^2, \quad \gamma\in [1,3]. $$
 
-### Entropy
+# Entropy
+
 Entropy S(U,V,N) is a function of U, V and N, the change of S can be expressed as
 $$ dS = \left(\frac{\partial S}{\partial U}\right)_{V,N}dU + \left(\frac{\partial S}{\partial V}\right)_{U,N}dV + \left(\frac{\partial S}{\partial N}\right)_{U,V}dN $$
 
 and
-$$ \frac{1}{T} = \left(\frac{\partial S}{\partial U}\right)_{V,N}, \quad 
+$$ \frac{1}{T} = \left(\frac{\partial S}{\partial U}\right)_{V,N}, \quad
     \frac{P}{T}=\left(\frac{\partial S}{\partial V}\right)_{U,N}, \quad
     -\frac{\mu}{T}=\left(\frac{\partial S}{\partial N}\right)_{U,V} $$
 
@@ -97,7 +101,7 @@ where $ \mu $ is the chemical potential.
 If U, V and N all change by very small amounts, the resulting change in the entropy function S(U,V,N) is
 $$ dS = \frac{1}{T}dU+\frac{P}{T}dV-\frac{\mu}{T}dN $$
 
-Thus, we have **Thermodynamic Identity** for diffusive systems, which is true only for ==*quasi-static process*== such that each step of change is *infinitesimal*. 
+Thus, we have **Thermodynamic Identity** for diffusive systems, which is true only for ==*quasi-static process*== such that each step of change is *infinitesimal*.
 $$ dU = TdS-PdV+\sum_i \mu_i dN_i $$
 
 The extra term $ \mu dN $ is sometimes called "**chemical work**".
@@ -126,11 +130,12 @@ $$ S = c_vln\frac{P}{\rho^\gamma} $$
 We have
 $$ P = e^{\frac{S}{c_v}}\rho^\gamma $$
 
-For isentropic flow, if $ \gamma = 1 \implies \alpha = +\infty $, we have $ P \propto \rho \implies T = const $, which means the gas is in isothermal process. 
+For isentropic flow, if $ \gamma = 1 \implies \alpha = +\infty $, we have $ P \propto \rho \implies T = const $, which means the gas is in isothermal process.
 
-### Sound speed
+# Sound speed
+
 The speed of sound is given by
 $$ c = \sqrt{\left(\frac{\partial P}{\partial \rho}\right)_S} =  \sqrt{\frac{\partial \rho^\gamma}{\partial \rho}} = \sqrt{\gamma\rho^{\gamma-1}} = \sqrt{\frac{\gamma \rho^\gamma}{\rho}} = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\gamma RT} $$
 
-The speed of sound in an ideal gas depends only on its temperature and composition. 
+The speed of sound in an ideal gas depends only on its temperature and composition.
 However, in a **dispersive** medium, the speed of sound is a function of sound frequency, through the dispersion relation. Each frequency component propagates at its own speed, called the **phase velocity**, while the energy of the disturbance propagates at the **group velocity**. The same phenomenon occurs with light waves; see optical dispersion for a description.
