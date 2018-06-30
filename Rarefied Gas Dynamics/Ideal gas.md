@@ -77,7 +77,7 @@ Therefore the **specific heat ratio** is
 $$ \gamma = \frac{c_p}{c_v} = \frac{\tfrac{\alpha}{2}}{1+\tfrac{\alpha}{2}} = \frac{\alpha+2}{\alpha} $$
 
 - monatomic gas: $ \alpha=3,\gamma=\frac{5}{3} $
-- diatomic gas: $ \alpha=5, \gamma=\frac{7}{5}=1.4 $
+- diatomic gas: $ \alpha=5, \gamma=\frac{7}{5}=1.4 $    
 
 and
 $$ \alpha = \frac{2}{\gamma-1}$$
