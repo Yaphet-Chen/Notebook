@@ -82,7 +82,9 @@ $$ \gamma = \frac{c_p}{c_v} = \frac{\tfrac{\alpha}{2}}{1+\tfrac{\alpha}{2}} = \f
 and
 $$ \alpha = \frac{2}{\gamma-1}$$
 
-$$ e = c_vT = \frac{c_v P}{R \rho} = \frac{P}{(\gamma-1)\rho} $$
+$$ e = c_vT = \frac{c_v P}{R \rho} = \frac{P}{(\gamma-1)\rho} = \frac{RT}{\gamma-1}$$
+
+$$ \implies c_v = \frac{R}{\gamma-1}, \quad c_p = \frac{\gamma R}{\gamma-1} $$
 
 Thus, the total energy of gas can be rewritten as
 $$ \rho E = \rho e+\frac{1}{2}\rho U^2 = \frac{P}{\gamma-1}+\frac{1}{2}\rho U^2, \quad \gamma\in [1,3]. $$
@@ -122,7 +124,10 @@ Therefore,
 $$ S \propto ln\frac{T^{c_v}}{\rho^R} \propto ln\frac{P^{c_v}}{\rho^{c_v+R}} \propto ln\frac{P^{c_v}}{\rho^{\gamma c_v}} \propto c_vln\frac{P}{\rho^\gamma} $$
 
 or
-$$ S = c_vln\frac{P}{\rho^\gamma}+const $$
+$$ S = c_vln\frac{P}{\rho^\gamma}+const = \frac{R}{\gamma-1}ln\frac{P}{\rho^\gamma}+const $$
+
+or
+$$ S = \frac{\gamma R}{\gamma-1}lnT-RlnP+const $$
 
 Since entropy is a relative quantity, we can define entropy for ideal gas as
 $$ S = c_vln\frac{P}{\rho^\gamma} $$
