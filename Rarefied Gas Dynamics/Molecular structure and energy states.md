@@ -50,6 +50,6 @@ $$ \zeta_v=\frac{2\Theta_v/T}{e^{\Theta_v/T}-1}$$
 Only at very high temperature $\Theta_v \to 2$. Thus it can be seen, the contribution of the translational motion and the rotation of molecules to the specific heat is $(5/2)R$, and the vibrational specific heat changes with temperature.
 
 The distribution function of energy $\varepsilon$ with $\zeta$ degrees of freedom is
-$$ f(\varepsilon)=\frac{1}{\Gamma(\zeta/2)}\frac{\varepsilon^{\frac{\zeta}{2}-1}}{(kT)^{\zeta/2}}e^{-\varepsilon/kT}$$
+$$ f(\varepsilon)=\frac{1}{\Gamma(\zeta/2)}\frac{\varepsilon^{\frac{\zeta}{2}-1}}{(kT)^{\zeta/2}}\mathrm{e}^{-\varepsilon/kT}$$
 
 This is certainly true for vibrational energy $\varepsilon_v$ with $\zeta_v$ degrees of freedom.
