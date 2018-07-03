@@ -8,6 +8,12 @@
 - [Binary elastic collisions of molecules](#binary-elastic-collisions-of-molecules)
 - [Collision cross-sections and molecule models](#collision-cross-sections-and-molecule-models)
     - [Hard sphere model](#hard-sphere-model)
+    - [The inverse power law model](#the-inverse-power-law-model)
+    - [Maxwell model](#maxwell-model)
+    - [Variable hard sphere (VHS) model](#variable-hard-sphere-vhs-model)
+    - [Variable soft sphere (VSS) model](#variable-soft-sphere-vss-model)
+    - [Generalized hard sphere (GHS) model](#generalized-hard-sphere-ghs-model)
+    - [Generalized soft sphere (VSS) model](#generalized-soft-sphere-vss-model)
 
 <!-- /code_chunk_output -->
 
@@ -112,3 +118,143 @@ $$ \mu = \frac{(5/8)(\pi mkT)^{1/2}}{[m/(4kT)]^4\int\limits_0^\infty c_r^7\sigma
 Similarly, the diffusion collision cross-section $\sigma_D$ appears in the expression of the diffusivity of binary *gas mixture* in the transport theory of Chapman-Enskog. The latter cross-section is also called **momentum transfer cross-section** $\sigma_M$.
 
 ## Hard sphere model
+
+The viscosity in the hard sphere model is
+$$ \mu = \frac{5}{16}(mkT/\pi)^{1/2}/d_{12}^2 $$
+
+where $d_{12}=\frac{1}{2}(d_1+d_2)$ is the distance of the closest approach of the two molecules.
+
+## The inverse power law model
+
+The force and potential of the **inverse power law model** or the **repulsion point center model** is given by the following force expressions
+$$ F=\kappa/r^\eta $$
+
+Or in terms of potential
+$$ \phi = \kappa/[(\eta-1)r^{\eta-1}] $$
+
+The hard sphere model is a special case of this model with $\eta = \infty$.
+The differential cross-section of this model is
+$$ \sigma\mathrm{d}\Omega = b\mathrm{d}b\mathrm{d}\varepsilon = W_0\left[\frac{\kappa}{m_r c_r^2}\right]^{\frac{2}{\eta-1}}\mathrm{d}W_0\mathrm{d}\varepsilon $$
+
+where $m_r=\frac{m_1 m_2}{m_1+m_2}$ is **reduced maas**, $W_0=b(m_r c_r^2/\kappa)^{1/(\eta-1)}$ is the dimensionless miss distance.
+
+>When $\eta$ has finite value, the integral of the *total cross-section* diverges, but the *viscosity and diffusion collision crosssections* are convergent.
+
+In such circumstances, it is usually necessary to make finite truncation either of miss distance $b$ or deflection angle $\chi$.
+
+>Note, as the stipulation of $W_{0,m}$ is arbitrary, this *total cross-section* can not be used to define the collision frequency or the mean free path.
+
+The viscosity for the inverse power law molecule is
+$$ \mu = \frac{5m(RT/\pi)^{1/2}(2mRT/\kappa)^{\frac{2}{\eta-1}}}{8A_2(\eta)\Gamma\left[4-\frac{2}{(\eta-1)}\right]} $$
+
+where
+$$ A_2(\eta) = \int\limits_0^\infty\sin^2\chi W_0\mathrm{d}W_0 $$
+
+## Maxwell model
+
+The special case of the inverse power law model with $\eta=5$ is called the **Maxwellian model** and it's viscosity is linearly proportional to the temperature.
+$$ \mu = \frac{2kT}{3\pi A_2(5)}\left(\frac{m}{2\kappa}\right)^{1/2} $$
+
+This is unrealistic, and thus the Maxwell molecule has significant limitations.
+
+## Variable hard sphere (VHS) model
+
+Unfortunately, the hard sphere molecule has fixed cross-section, but the collision cross-section of real gas changes with the relative velocity (decreases with the increase of $c_r$). The difference of various molecular models manifests in the different dependence of the viscosity $\mu$ on the temperature $T$. For hard sphere, $\mu$ is proportional to $T$ in the power of `1/2`, but in real gas (for oxygen, nitrogen and air) this power isnear `0.75`.
+
+The **VHS model** or the **Variable Hard Sphere model** stipulates that the collision cross-section is proportional to the inverse power of the relative velocity while the molecules possess isotropic scattering probability as the hard sphere.
+$$ (\sigma_T/\sigma_{T,ref}) = (d/d_{ref})^2 = (c_r/c_{r,ref})^{-2\xi} = (\varepsilon_t/\varepsilon_{t,ref})^{-\xi} $$
+
+where the reference values $\sigma_{T,ref}$, $d_{ref}$, $c_{r,ref}$ and $\varepsilon_{t,ref}$ are introduced for the total crosssection $\sigma_T$, molecular diameter $d$, relative velocity $c_r$ and relative translational energy $\varepsilon_t$, where $\sigma_{T,ref}$ and $d_{ref}$ are the values when the relative velocity is $c_{r,ref}$.
+
+The deflection angle $\chi$, the relation of the viscosity collision cross-section $\sigma_\mu$, diffusion cross-section $\sigma_D$ with the total cross-section $\sigma_T$, is the same as the ==hard sphere model==
+$$ b=d\cos(\chi/2), \quad \sigma_\mu=\frac{2}{3}\sigma_T, \quad \sigma_D=\sigma_T $$
+
+That is, the deflection angle $\chi$ does not depend on $c_r$ explicitly. One can calculate the viscosity by writting $\sigma_T$ as $(c_r/c_{r,ref})^{-2\xi}\sigma_{T,ref}$
+$$ \mu = \frac{\frac{15}{8} (\pi mk)^{1/2} (4k/m)^\xi T^{1/2+\xi}}{\Gamma(4-\xi) \sigma_{T,ref}c_{r,ref}^{2\xi}} $$
+
+By adjusting the power $\xi$ in the definition formula, one can attain the required power $\omega$ in the dependence of viscosity on temperature
+$$ \mu \propto T^\omega $$
+
+For this one only needs to put
+$$ \frac{1}{2}+\xi = \omega = \frac{1}{2}\frac{\eta+3}{\eta-1} $$
+
+or
+$$ \xi = \omega-\frac{1}{2} = \frac{2}{\eta-1} $$
+
+with the power $\eta$ in the inverse power law.
+>For the *hard sphere (HS) model* one has $\omega=1/2, \eta=\infty \text{ and } \xi=0$, for the *variable hard sphere (VHS and also the inverse power law IPL)* molecule with $\omega=0.75$, one has $\eta=9$ and $\xi=0.25$, and for the *Maxwellian molecule* one has $\omega=1, \eta=5$ and $\xi=1/2$.
+
+>The hard sphere model with $\eta=\infty$ is the most hard molecule, and the Maxwellian molecule is the most soft among the molecular models under study.
+
+## Variable soft sphere (VSS) model
+
+But for inverse power law molecule, the ratio of $\sigma_D$ to $\sigma_\mu$ is $A_1(\eta)/A_2(\eta)$. This results in quite large deviation from practice of the VHS model in considering *multi-component gas mixture with diffusion* playing essential role.
+
+Koura and Matsumoto introduced the **variable soft sphere (VSS) model** and overcame this shortcoming of the VHS model. They suggest that the total cross-section (or the molecular diameter) depends on the energy during the collision as in the VHS model, but the **scattering law** of the VSS model is
+$$ b=d\cos^\alpha(\chi/2) $$
+
+where $d$ and $\alpha$ both depend on the relative energy in the collision, $\alpha$ being the power of the cosine of the deflection angle.
+
+>As $d$ is variable and for $\alpha>1$ (it is the case for real gas) the deflection angel $\chi_{\scriptscriptstyle VSS}$ is less than the deflection angle $\chi_{\scriptscriptstyle VHS}$ of the HS and VHS model, so it is named the variable soft sphere model.
+
+For the VSS model, it is easy to obtain
+$$ \sigma_T = 2\pi \int b\mathrm{d}b = \pi d^2 $$
+
+$$ \sigma_\mu = 2\pi\int\sin^2\chi b\mathrm{d}b = 2 \pi d^2 \int (1-\cos^2\chi)\left(\cos\frac{\chi}{2}\right)^\alpha\mathrm{d}\left(\cos\frac{\chi}{2}\right)^\alpha = S_\mu \frac{2}{3}\sigma_T $$
+
+$$ \sigma_D = 2\pi\int(1-\cos\chi) b\mathrm{d}b = 2\pi d^2\int(1-\cos\chi)\left(\cos\frac{\chi}{2}\right)^\alpha\mathrm{d}\left(\cos\frac{\chi}{2}\right)^\alpha = S_D \sigma_T $$
+
+where
+$$ S_\mu=\frac{6\alpha}{(\alpha+1)(\alpha+2)} $$
+
+$$ S_D=\frac{2}{\alpha+1} $$
+
+are called **soft coefficients** of viscosity and diffusivity collision cross-sections, respectively.
+Equalizing the ratio for the VSS model to the ratio for the inverse power law model
+$$ \frac{\sigma_\mu}{\sigma_D} = \frac{2S_\mu}{3S_D} = \frac{A_2(\eta)}{A_1(\eta)} $$
+
+the value of $\alpha$ is obtained
+$$ \alpha = \left[\frac{A_1(\eta)}{A_2(\eta)}-\frac{1}{2}\right]^{-1} $$
+
+The viscosity $\mu$ under the VSS model is obtained by
+$$ \mu_{\scriptscriptstyle VSS} = \mu_{\scriptscriptstyle VHS}/S_\mu = \frac{5(\alpha+1)(\alpha+2)(\pi mk)^{1/2}(4k/m)^\xi T^{\frac{1}{2}+\xi}}{16\alpha\Gamma(4-\xi)\sigma_{T,ref}c_{r,ref}^{2\xi}} $$
+
+>For all HS, VHS and VSS models there is the invariance of the relative velocity $c_r^*$ before and after collision. For HS and VHS molecules there is the result of the *isotropic distribution* of the post-collision velocity $c^*$ over all directions.
+
+## Generalized hard sphere (GHS) model
+
+The inverse power law describes the intermolecular action as a *pure repulsion force*. For flow fields around re-entry vehicles, the temperature variation range is very large, the dependence of viscosity on the temperature can not be represented entirely by an one-exponent power law. The interaction between molecules except the short distance repulsion force *reveals the attraction character at large intermolecular distances*. A molecular model capable of reproducing **attractive-repulsive potential** is desirable.
+
+The **generalized hard sphere (GHS)** introduced by Hassan and Hash, contains the intermolecular force that possesses both attraction and repulsion. *Its scattering law is similar with the hard sphere model*, but the relation of its total cross-section $\sigma_T$ with the relative kinetic energy $\varepsilon_t$ allows the reproduction of the attractive-repulsive potential.
+$$ \sigma_T/l^2 = \Sigma\alpha_j \left(\frac{\varepsilon_t}{\varepsilon}\right)^{-\xi_j} $$
+
+where $\varepsilon$ has the dimension of energy, $l$ has the dimension of length and is ==a parameter depending on the gas component==, $\varepsilon_t=\frac{1}{2}m_r c_r^2$ as before.
+
+The scattering law is taken the same as the hard sphere, i.e.
+$$ b=d\cos(\chi/2) \quad \text{or} \quad \sigma_\mu=\frac{2}{3}\sigma_T $$
+
+One can also obtain the viscosity
+$$ \mu = \frac{\frac{15}{8} (\pi mkT)^{1/2}/l^2}{\Sigma\alpha_j \Gamma(4-\xi_j) (kT/\varepsilon)^{-\xi_j}} $$
+
+If the two-term expression is used, then
+$$ \mu = \frac{\mu_0}{1+ST^{\xi_1-\xi_2}} $$
+
+$$ \mu_0 = \frac{15}{8}\frac{(\pi mkT)^{1/2} (kT/\varepsilon)^{\xi_1}}{\alpha_1 \Gamma(4-\xi_1) l^2}, \quad S = \frac{\alpha_2}{\alpha_1}\frac{\Gamma(4-\xi_2)}{\Gamma(4-\xi_1)}\left(\frac{k}{\varepsilon}\right)^{\xi_1-\xi_2} $$
+
+Let $\xi_1=1, \xi_2=0$, the **viscosity law of Sutherland** is obtained.
+For the **Lennard-Jones interaction potential**
+$$ F=\frac{\kappa_{12}}{r^\eta}-\frac{\kappa_{12}'}{r^{\eta'}}, \quad \eta>\eta'$$
+
+Chapman and Cowing gives the following expression of the viscosity for the Lennard-Jones interaction potential
+$$ \mu=\mu_{\scriptscriptstyle IPL}/\left(1+ST^{-\frac{\eta-\eta'}{\eta-1}}\right) $$
+
+where $\mu_{\scriptscriptstyle IPL}$ is the expression of the viscosity under iiverse power law. Compared with the two-term expression, it yields
+$$ \xi_1=\frac{2}{\eta-1}, \quad \xi_2=\frac{2-\eta'+\eta}{\eta-1} $$
+
+For the Lennard-Jones 6-12 $(\eta = 13, \eta' =7)$ model, one has $\xi_1=1/6, \xi_2=2/3$.
+
+## Generalized soft sphere (VSS) model
+
+The simultaneous adoption of the GHS dependence of $\sigma_T$ on $\varepsilon_t$ and the VSS molecular scattering law $b=d\cos^\alpha(\chi/2)$ which naturally lead to the **generalized soft sphere (GSS) model**.
+
+>The GSS model is of meaning especially for the case of low temperature and polar mofecules. e.g. The **Stockmayer potential**, which takes into account the electrostatic interaction between polar molecules.
