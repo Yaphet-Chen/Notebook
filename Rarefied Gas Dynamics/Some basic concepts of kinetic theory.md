@@ -6,6 +6,8 @@
 - [The velocity distribution function](#the-velocity-distribution-function)
 - [Macroscopic properties](#macroscopic-properties)
 - [Binary elastic collisions of molecules](#binary-elastic-collisions-of-molecules)
+- [Collision cross-sections and molecule models](#collision-cross-sections-and-molecule-models)
+    - [Hard sphere model](#hard-sphere-model)
 
 <!-- /code_chunk_output -->
 
@@ -83,4 +85,30 @@ $$ \delta \equiv n^{-1/3} \gg d $$
 
 is satisfied, the condition that only the binary collision is important is also satisfied.
 
-To fully determine the collision, we need to specify the  **pre-collision velocities** $\bm{c_1}$ and $\bm{c_2}$, two **impact parameters** and the **intermolecular potential**. The two impact parameters are the distance $b$ of the projected distance between the pre-collision velocities, it is also called the **miss distance**) and the **angle** $\varepsilon$ between the collision plane (in which the trajectories lie in this system of coordinates) and some reference plane.
+To fully determine the collision, we need to specify the  **pre-collision velocities** $\bm{c_1}$ and $\bm{c_2}$, two **impact parameters** and the **intermolecular potential**. The two impact parameters are the distance $b$ of the projected distance between the pre-collision velocities, it is also called the **miss distance**) and the **deflection angle** $\varepsilon$ between the collision plane (in which the trajectories lie in this system of coordinates) and some reference plane.
+
+# Collision cross-sections and molecule models
+
+The **differential collision cross-section** $\sigma$ is defined as the cross section corresponding to **unit solid angle** $\mathrm{d}\Omega$, that is,
+$$ \sigma\mathrm{d}\Omega = \sigma \sin \chi \mathrm{d}\chi \mathrm{d}\varepsilon = b\mathrm{d}b\mathrm{d}\varepsilon $$
+
+so one has
+$$ \sigma = \frac{b}{\sin\chi}\left|\frac{\mathrm{d}b}{\mathrm{d}\chi}\right|$$
+
+The **total collision section** $\sigma_T$ is obtained from the differential one through integrating over the entire solid angle
+$$ \sigma_T = \int\limits_0^{4\pi} \sigma \mathrm{d}\Omega = \int\limits_o^{2\pi} \mathrm{d}\varepsilon \int \sigma\sin\chi\mathrm{d}\chi = 2\pi\int b\mathrm{d}b $$
+
+>To find the collision cross-section $b$ is of course not to be considered as simple geometrical coordinate and integrated. *Only under certain model of the intermolecular force*, that is, when the relation between the deflection angle $\chi$ and $b$ is known, the definition of $\sigma$ and $\sigma_T$ through $b$ has meaning.
+
+In treating practical problems of molecular motion, not only the total crosssection plays important role, but the cross-sections relevant to the
+*transport properties* of the gas also play important role. These are the so called **viscosity cross-section** $\sigma_\mu$ and **diffusion cross-section** $\sigma_D$
+$$ \sigma_\mu = \int\limits_0^{4\pi}\sin^2\chi\sigma\mathrm{d}\Omega = 2\pi\int\sigma\sin^3\chi\mathrm{d}\chi = 2\pi\int\sin^2\chi b\mathrm{d}b $$
+
+$$ \sigma_D = \int\limits_0^{4\pi}(1-\cos\chi)\sigma\mathrm{d}\Omega = 2\pi\int\sigma(1-\cos\chi)\sin\chi\mathrm{d}\chi = 2\pi\int(1-\cos\chi) b\mathrm{d}b $$
+
+Viscosity cross-section $\sigma_\mu$ appears in the expression of the viscosity $\mu$ in the transport theory of Chapman-Enskog
+$$ \mu = \frac{(5/8)(\pi mkT)^{1/2}}{[m/(4kT)]^4\int\limits_0^\infty c_r^7\sigma_\mu\mathrm{exp}[-mc_r^2/(4kT)]\mathrm{d}c_r} $$
+
+Similarly, the diffusion collision cross-section $\sigma_D$ appears in the expression of the diffusivity of binary *gas mixture* in the transport theory of Chapman-Enskog. The latter cross-section is also called **momentum transfer cross-section** $\sigma_M$.
+
+## Hard sphere model
