@@ -14,6 +14,14 @@
     - [Variable Soft Sphere (VSS) Model](#variable-soft-sphere-vss-model)
     - [Generalized Hard Sphere (GHS) Model](#generalized-hard-sphere-ghs-model)
     - [Generalized Soft Sphere (VSS) Model](#generalized-soft-sphere-vss-model)
+- [Collis ion Integral and The Total Number of Collisions](#collis-ion-integral-and-the-total-number-of-collisions)
+- [Evaluation of Collision Integrals](#evaluation-of-collision-integrals)
+- [Maxwell Distribution](#maxwell-distribution)
+- [Equilibrium State of Gases](#equilibrium-state-of-gases)
+    - [Some Peculiar Speeds of Gas](#some-peculiar-speeds-of-gas)
+    - [Molecular Collision Frequency and The Mean Free Path](#molecular-collision-frequency-and-the-mean-free-path)
+    - [The Mean Value of Collision Quantities](#the-mean-value-of-collision-quantities)
+    - [The Reference Diameter of The VSS Model and The VHS Model](#the-reference-diameter-of-the-vss-model-and-the-vhs-model)
 
 <!-- /code_chunk_output -->
 
@@ -258,3 +266,68 @@ For the Lennard-Jones 6-12 $(\eta = 13, \eta' =7)$ model, one has $\xi_1=1/6, \x
 The simultaneous adoption of the GHS dependence of $\sigma_T$ on $\varepsilon_t$ and the VSS molecular scattering law $b=d\cos^\alpha(\chi/2)$ which naturally lead to the **generalized soft sphere (GSS) model**.
 
 >The GSS model is of meaning especially for the case of low temperature and polar mofecules. e.g. The **Stockmayer potential**, which takes into account the electrostatic interaction between polar molecules.
+
+# Collis ion Integral and The Total Number of Collisions
+
+The multiplication of the right hand side of the Boltzmann equation by a function $Q(\bm{c})$ associated with molecular velocity $\bm{c}$ and integration over the entire velocity space $\bm{c}$ leads to an expression called **collision integral**
+$$ \Delta[Q] = \int\limits_{-\infty}^\infty\int\limits_{-\infty}^\infty\int\limits_{0}^{4\pi} Q (f^*f^*_1-ff_1)c_r\sigma \mathrm{d}\Omega\mathrm{d}\bm{c_1}\mathrm{d}\bm{c} $$
+
+The **mean value** $\overline{Q}$ of a quantity $Q$ associated with the relative velocity is defined as
+$$ \overline{Q(c_r)} = \frac{1}{n^2}\iint Q(c_r)f_1f \mathrm{d}\bm{c_1}\mathrm{d}\bm{c} $$
+
+And the total number $N_c$ of molecular collisions in unit time in unit volume can be written as
+$$ N_c = \frac{1}{2} \int\limits_{-\infty}^\infty\int\limits_{-\infty}^\infty\int\limits_{0}^{4\pi} c_r\sigma f_1f \mathrm{d}\Omega\mathrm{d}\bm{c_1}\mathrm{d}\bm{c} = \frac{1}{2} \int\limits_{-\infty}^\infty\int\limits_{-\infty}^\infty c_r \sigma_T f_1 f \mathrm{d}\bm{c_1}\mathrm{d}\bm{c} = \frac{1}{2} n^2 \overline{\sigma_T c_r} $$
+
+# Evaluation of Collision Integrals
+
+The only **summational invariants**, that is, $\Delta[Q]=0$, when and only when
+$$ Q=Ac^2+\bm{B\cdot c}+C $$
+
+# Maxwell Distribution
+
+**Maxwell distribution**, i.e. the velocity distribution function under the equilibrium state of the gas, is
+$$ f_0 = n\left(\frac{m}{2\pi kT}\right)^{3/2}\mathrm{exp}\left(-\frac{mc'^2}{2kT}\right) = n\left(\frac{m}{2\pi kT}\right)^{3/2}\mathrm{exp}\left(-\frac{m}{2kT}(u'^2+v'^2+w'^2)\right)$$
+
+Sometimes it is expressed through $\beta$:
+$$ f_0 = n\left(\frac{\beta}{\sqrt{\pi}}\right)^3 \mathrm{exp}\left(-\beta^2 c'^2 \right), \quad \beta=(2RT)^{-1/2} $$
+
+The **Boltzmann distribution** is the more general distribution than the **Maxwellain distribution** derived from the kinetic theory. Maxwellian distribution can be considered as a particular example of the Boltzmann distribution with $\varepsilon_j = \frac{1}{2}mc'^2$.
+
+# Equilibrium State of Gases
+
+## Some Peculiar Speeds of Gas
+
+**Maxwellian speed distribution function** $\chi(c')$ of the value of the velocity can be defined
+$$ \chi(c') = 4\pi\left(\frac{m}{2\pi kT}\right)^{3/2} c'^2 \mathrm{exp}\left(-\frac{mc'^2}{2kT}\right)$$
+
+The **most probable molecular thermal speed** $c'_m$ is the value of $c'$ where $\chi(c')$ reaches the maximum, from the differentiation $\frac{\partial \chi}{\partial c'}=0$ it is easy to obtain
+$$ c'_m = 1/\beta = \left(\frac{2kT}{m}\right)^{1/2} $$
+
+The **average thermal speed** $\overline{c'}$ is defined by the following equation
+$$ \overline{c'} = \int\limits_0^\infty c'\chi(c')\mathrm{d}c' = \left(\frac{8kT}{\pi m}\right)^{1/2} $$
+
+The **root mean thermal speed** $c'_s$ is defined as
+$$ c'_s \equiv (\overline{c'^2})^{1/2} = \left(\int\limits_0^\infty c'^2\chi(c')\mathrm{d}c' \right)^{1/2} = \left(\frac{3kT}{m}\right)^{1/2} $$
+
+## Molecular Collision Frequency and The Mean Free Path
+
+Since the **total collision number of molecules** $N_c$ in the gas in unit volume in unit time is obtained and the relation of $N_c$ with the number density $n$ and the **collision frequency** $\nu$ of each molecule is as follows
+$$  N_c = \frac{1}{2} \int\limits_{-\infty}^\infty\int\limits_{-\infty}^\infty \sigma_T c_r f_1 f \mathrm{d}\bm{c_1}\mathrm{d}\bm{c} = \frac{1}{2}n\nu $$
+
+Here the symmetric factor $1/2$ is introduced because every collision involves two molecules. And the expressbn for **collision frequency** $\nu$ is obtained as
+$$ \nu = \frac{1}{n}\int\limits_{-\infty}^\infty\int\limits_{-\infty}^\infty \sigma_T c_r f_1 f \mathrm{d}\bm{c_1}\mathrm{d}\bm{c} = n\overline{\sigma_T c_r} $$
+
+We can calculate the collision frequency of the VHS/VSS model molecules in the ==equilibrium state== by substituting $ \sigma_T = \sigma_{T,ref}c_{r,ref}^{2\xi}c_r^{-2\xi} = \sigma_{T,ref}c_{r,ref}^{2\omega-1}c_r^{1-2\omega} $, we have
+$$ \nu_0 = n\sigma_{T,ref}c_{r,ref}^{2\omega-1}\frac{2}{\sqrt{\pi}}\Gamma\left(\frac{5}{2}-\omega\right) \left(\frac{2kT}{m_r}\right)^{1-\omega} $$
+
+In fact, we can make use of the expression of the viscosity for the VSS model to express the collision frequency $\nu_0$.
+$$ \nu_0 = \frac{5(\alpha+1)(\alpha+2)}{\alpha(7-2\omega)(5-2\omega)}\frac{p}{\mu} $$
+
+Making use of the definition of the molecular mean free path $\lambda = \overline{c}/\nu $, one obtains the **mean free path** $\lambda_0$ for VSS model in the ==equilibrium state==
+$$ \lambda_0 = \frac{4\alpha(7-2\omega)(5-2\omega)}{5(\alpha+1)(\alpha+2)} \left(\frac{m}{2\pi kT}\right)^{1/2} \frac{\mu}{\rho} $$
+
+>In this equation let $\alpha=1$, one obtains the result for the VHS model. For simple hard sphere model, $\omega=1/2,\alpha=1$. For more realistic situation, we choose $\omega=0.75$ and $\alpha=1.5$.
+
+## The Mean Value of Collision Quantities
+
+## The Reference Diameter of The VSS Model and The VHS Model
