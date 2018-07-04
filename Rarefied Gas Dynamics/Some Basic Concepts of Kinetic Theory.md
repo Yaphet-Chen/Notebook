@@ -21,7 +21,6 @@
     - [Some Peculiar Speeds of Gas](#some-peculiar-speeds-of-gas)
     - [Molecular Collision Frequency and The Mean Free Path](#molecular-collision-frequency-and-the-mean-free-path)
     - [The Mean Value of Collision Quantities](#the-mean-value-of-collision-quantities)
-    - [The Reference Diameter of The VSS Model and The VHS Model](#the-reference-diameter-of-the-vss-model-and-the-vhs-model)
 
 <!-- /code_chunk_output -->
 
@@ -330,4 +329,11 @@ $$ \lambda_0 = \frac{4\alpha(7-2\omega)(5-2\omega)}{5(\alpha+1)(\alpha+2)} \left
 
 ## The Mean Value of Collision Quantities
 
-## The Reference Diameter of The VSS Model and The VHS Model
+The **mean value of a collision quantity** $\overline{Q}$ is obtained by multiplying the expression in the integral of the collision frequency $\nu$ by $Q$ and then normalization of thus obtained integral by $v$.
+$$ \overline{Q} = \left(\frac{1}{n}\int\limits_{-\infty}^\infty\int\limits_{-\infty}^\infty Q \sigma_T c_r f_1 f \mathrm{d}\bm{c_1}\mathrm{d}\bm{c} \right) \Bigg / \left( \frac{1}{n}\int\limits_{-\infty}^\infty\int\limits_{-\infty}^\infty \sigma_T c_r f_1 f \mathrm{d}\bm{c_1}\mathrm{d}\bm{c} \right) = \frac{\overline{Qc_r^j}}{\overline{c_r^j}} $$
+
+where the value of $j$ should chosen equal to the power in the dependence of $\sigma_T c_r$ on $c_r$
+$$ \overline{Q} = 2\left(\frac{m_r}{2kT}\right)^{(j+3)/2} \frac{1}{\Gamma[(j+3)/2]} \int\limits_0^\infty Qc_r^{j+2}\mathrm{exp}\left(-\frac{m_r c_r^2}{2kT}\right) \mathrm{d}c_r $$
+
+For the VHS/VSS model, $\sigma_T c_r \sim c_r^{1-2\xi}$, $j=2-2\omega$. So for the VHS/VSS model molecules we have
+$$ \overline{Q} = \frac{2}{\Gamma\left(\frac{5}{2}-\omega\right)} \left(\frac{m_r}{2kT}\right)^{5/2-\omega} \int\limits_0^\infty Q c_r^{2(2-\omega)} \mathrm{exp}\left(-\frac{m_r c_r^2}{2kT}\right) \mathrm{d}c_r $$
