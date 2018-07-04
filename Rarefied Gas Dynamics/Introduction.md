@@ -48,7 +48,7 @@ $$ \lambda = \frac{\bar{c}}{\nu} = \frac{\bar{c}}{\overline{c_r\sigma_T}n} = \fr
 
 >在高超声速绕流问题中，由于冷壁的存在，从物体表面散射的分子与来流分子相碰撞的平均自由程$\lambda_i$要比$\lambda$小得多，因此流动满足自由分子流的要求要比上述分流要严格一些。
 
-## Classification of Mach regimes
+## Classification of Mach Regimes
 
 | Regime          | Mach number |
 | :-------------: | :---------: |
@@ -61,15 +61,15 @@ $$ \lambda = \frac{\bar{c}}{\nu} = \frac{\bar{c}}{\overline{c_r\sigma_T}n} = \fr
 
 High temperatures due to a manifestation of viscous dissipation cause non-equilibrium chemical flow properties such as ***vibrational excitation*** and ***dissociation*** and ***ionization*** of molecules resulting in *convective* and *radiative heat-flux*. These effects collectively become important around `Mach 5`.
 
-### Dissociated gas
+### Dissociated Gas
 
 The type of surface material also has an effect on the flow because it serves as ***surface catalysis***. The lower border of this regime is where any component of a gas mixture first begins to dissociate in the stagnation point of a flow (which for nitrogen is around `2000 K`). At the upper border of this regime, the effects of ionization start to have an effect on the flow.
 
-### Ionized gas
+### Ionized Gas
 
 In this regime the ionized electron population of the stagnated flow becomes significant, and the electrons must be modeled separately. Often the electron temperature is handled separately from the temperature of the remaining gas components. This region occurs for freestream flow velocities around `10–12 km/s`. Gases in this region are modeled as ***non-radiating plasmas***.
 
-### Radiation-dominated regime
+### Radiation-dominated Regime
 
 Above around `12 km/s`, the heat transfer to a vehicle changes from being conductively dominated to radiatively dominated. The modeling of gases in this regime is split into two classes: *Optically thin* and *Optically thick*.
 
